@@ -1,0 +1,128 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue--main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+html{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--very-dark-blue--main-BG);
+    display: grid;
+    place-items: center;  
+}
+.card{
+    width: 340px;
+    padding: 20px;
+    background-color: var(--very-dark-blue-card-BG);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+.image{
+    position: relative;
+    border-radius: 15px;
+}
+.view{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: hsla(178, 100%, 50%,.5);
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    display: grid;
+    border-radius: inherit;
+    opacity: 0%;
+}
+.view:hover{
+    opacity: 100%;
+}
+img{
+    border-radius: inherit;
+    display: block;
+}
+
+.serial{
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+}
+
+p{
+    color: var(--soft-blue);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+.balance{
+    color: var(--cyan);
+    font-weight: 400;
+}
+.duration{
+    color: var(--soft-blue);
+    
+    font-weight: 300;  
+}
+.balance,
+.duration{
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+hr{
+    
+    opacity: 20%;
+}
+.creation{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+    font-weight: 400;
+  
+}
+.creation img{
+    width: 2rem;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.creation > span:first-of-type{
+    color: var(--soft-blue);
+   
+    font-weight: 300;  
+}
+.creator{
+    color: var(--white);
+}
+
+.serial:hover,
+.creator:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
